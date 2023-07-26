@@ -122,7 +122,7 @@ static void thermal_zone_trip_update(struct thermal_zone_device *tz, int trip)
 	trend = get_tz_trend(tz, trip);
 
 	if (tz->temperature >= trip_temp)
-		throttle = true;
+		throttle = false;
 
 	mutex_lock(&tz->lock);
 
